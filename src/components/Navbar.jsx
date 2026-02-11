@@ -11,9 +11,8 @@ function Navbar() {
       </div>
 
       <ul className="nav-links">
-        <li><a className="nav-link" href="/platform">Platform</a></li>
-        <li><a className="nav-link" href="/solutions">Solutions</a></li>
         <li><a className="nav-link" href="/about">About</a></li>
+        <li><a className="nav-link" href="/development">Development</a></li>
         <li><a className="nav-link nav-cta" href="/contact">Contact</a></li>
       </ul>
     </nav>
