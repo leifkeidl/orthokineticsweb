@@ -42,7 +42,7 @@ function AboutPage() {
               <p className="bio">
 		  Cybersecurity and computer science background with hands-on experience and a focused interest in IT infrastructure and software development.
               </p>
-              <a href="#" className="linkedin-btn">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/leif-keidl-5b8784302/" className="linkedin-btn">LinkedIn</a>
             </div>
 
             <div className="team-card">
