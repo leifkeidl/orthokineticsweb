@@ -52,9 +52,9 @@ function AboutPage() {
             <div className="team-card">
               <img src={tommyPhoto} alt="Tommy Welling" />
               <h3>Tommy Welling</h3>
-              <p className="role">placeholder</p>
+              <p className="role">Engineering Lead</p>
               <p className="bio">
-				desc              </p>
+				Engineering Physics major specializing in electronics and digital systems.             </p>
               <a href="#" className="linkedin-btn">LinkedIn</a>
             </div>
 
