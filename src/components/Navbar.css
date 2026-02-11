@@ -1,7 +1,7 @@
 :root {
   --nav-bg: rgba(255, 255, 255, 0.92);
-  --nav-text: #0b1220;      /* slightly deeper than before */
-  --nav-muted: #334155;     /* slate-700 */
+  --nav-text: #0b1220;
+  --nav-muted: #334155;
   --nav-hover: #0b5fff;
   --nav-border: rgba(15, 23, 42, 0.10);
 
@@ -11,14 +11,23 @@
 }
 
 * { box-sizing: border-box; }
-body { margin: 0; }
+
+/* Prevent ANY “100vw / negative margin / sticky” micro-overflow from creating horizontal scroll */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
 
 .navbar {
   height: var(--nav-height);
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
   color: var(--nav-text);
 
-  /* subtle premium lift */
   background:
     linear-gradient(to bottom, rgba(255,255,255,0.96), rgba(255,255,255,0.88));
   border-bottom: 1px solid var(--nav-border);
@@ -38,15 +47,22 @@ body { margin: 0; }
   -webkit-backdrop-filter: blur(10px);
 }
 
+.nav-left {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
 .brand {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
   color: var(--nav-text);
+  min-width: 0;
 }
 
 .brand-logo {
-  height: 38px; /* was 34px → ~11.7% bigger */
+  height: 38px;
   width: auto;
   display: block;
   filter: drop-shadow(0 2px 10px rgba(15, 23, 42, 0.12));
@@ -59,12 +75,15 @@ body { margin: 0; }
   gap: 14px;
   margin: 0;
   padding: 0;
+
+  /* critical for flex overflow: allows this flex item to shrink */
+  min-width: 0;
 }
 
 .nav-link {
   text-decoration: none;
   color: var(--nav-muted);
-  font-weight: 650; /* slightly more decisive */
+  font-weight: 650;
   font-size: 0.95rem;
 
   padding: 10px 12px;
@@ -110,3 +129,4 @@ body { margin: 0; }
   .nav-links { gap: 8px; }
   .nav-link { padding: 9px 10px; font-size: 0.9rem; }
 }
+
