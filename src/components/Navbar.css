@@ -12,7 +12,6 @@
 
 * { box-sizing: border-box; }
 
-/* Prevent ANY “100vw / negative margin / sticky” micro-overflow from creating horizontal scroll */
 html, body {
   margin: 0;
   padding: 0;
@@ -62,8 +61,10 @@ html, body {
 }
 
 .brand-logo {
-  height: 38px;
+  height: auto;
   width: auto;
+  max-width: 20vw;   /* keeps it proportional */
+  max-height: 38px;
   display: block;
   filter: drop-shadow(0 2px 10px rgba(15, 23, 42, 0.12));
 }
@@ -75,8 +76,6 @@ html, body {
   gap: 14px;
   margin: 0;
   padding: 0;
-
-  /* critical for flex overflow: allows this flex item to shrink */
   min-width: 0;
 }
 
@@ -108,7 +107,6 @@ html, body {
   border-radius: 12px;
 }
 
-/* CTA button */
 .nav-cta {
   color: white;
   background: linear-gradient(180deg, #0b5fff, #0849c9);
@@ -123,10 +121,46 @@ html, body {
   transform: translateY(-1px);
 }
 
-/* Responsive */
+/* ========================= */
+/* Tablet adjustments */
+/* ========================= */
+
 @media (max-width: 900px) {
   :root { --nav-pad-x: 18px; }
+
   .nav-links { gap: 8px; }
   .nav-link { padding: 9px 10px; font-size: 0.9rem; }
+}
+
+/* ========================= */
+/* Skinny phone scaling */
+/* ========================= */
+
+@media (max-width: 600px) {
+
+  :root {
+    --nav-height: 64px;
+    --nav-pad-x: 14px;
+  }
+
+  /* Keep logo dominant but controlled */
+  .brand-logo {
+    max-width: 28vw;
+    max-height: 30px;
+  }
+
+  /* Scale nav buttons proportionally */
+  .nav-link {
+    font-size: 3.6vw;
+    padding: 1.8vw 2.6vw;
+  }
+
+  .nav-cta {
+    padding: 1.8vw 3vw;
+  }
+
+  .nav-links {
+    gap: 2vw;
+  }
 }
 
