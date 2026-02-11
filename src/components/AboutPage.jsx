@@ -2,6 +2,10 @@ import Navbar from "./Navbar.jsx";
 import "./AboutPage.css";
 import teamPhoto from "../assets/ortho-team.jpg";
 import leifPhoto from "../assets/leif2.jpg";
+import gagePhoto from "../assets/gage1.jpg";
+import tommyPhoto from "../assets/tommy2.jpg";
+
+
 
 
 function AboutPage() {
@@ -26,7 +30,7 @@ function AboutPage() {
           <div className="team-grid">
 
             <div className="team-card">
-              <img src={teamPhoto} alt="Gage Rusch" />
+              <img src={gagePhoto} alt="Gage Rusch" />
               <h3>Gage Rusch</h3>
               <p className="role">Project Lead</p>
               <p className="bio">
@@ -46,7 +50,7 @@ function AboutPage() {
             </div>
 
             <div className="team-card">
-              <img src={teamPhoto} alt="Tommy Welling" />
+              <img src={tommyPhoto} alt="Tommy Welling" />
               <h3>Tommy Welling</h3>
               <p className="role">placeholder</p>
               <p className="bio">
