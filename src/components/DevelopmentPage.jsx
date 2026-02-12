@@ -1,4 +1,3 @@
-
 // DevelopmentPage.jsx
 import { useEffect, useMemo, useRef, useState } from "react";
 import Navbar from "./Navbar.jsx";
@@ -8,10 +7,9 @@ import "./DevelopmentPage.css";
 import casingRender from "../assets/ok-asset1.png";
 
 // 2) Exploded view (placeholder for now)
-//    Replace this import with your real exploded-view image when you have it.
 import explodedRender from "../assets/EXPLODEPACKAGE2.png";
 
-// NEW: wide screenshot at end
+// wide screenshot at end
 import appScreenshot from "../assets/app1.png";
 
 function clamp(n, min, max) {
@@ -39,7 +37,6 @@ function useParallaxProgress(sectionRef) {
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", updateRect);
 
-    // re-measure after layout settles
     const t = setTimeout(updateRect, 250);
 
     return () => {
@@ -64,13 +61,10 @@ function DeviceShowcase({
   desc,
   bullets,
   imgSrc,
-  captionTitle,
-  captionBody,
   flip = false,
 }) {
   const p = useParallaxProgress(sectionRef);
 
-  // subtle motion (kept mild)
   const parallaxY = (p - 0.5) * -18; // px
   const parallaxX = (p - 0.5) * 8;   // px
   const tilt = (p - 0.5) * 1.6;      // deg
@@ -84,8 +78,7 @@ function DeviceShowcase({
     <section ref={sectionRef} className="dev-block" aria-label={title}>
       <div className={"dev-block-inner" + (flip ? " flip" : "")}>
         <div className="dev-copy">
-		  
-{eyebrow && <p className="dev-eyebrow">{eyebrow}</p>}
+          {eyebrow && <p className="dev-eyebrow">{eyebrow}</p>}
           <h2>{title}</h2>
           <p className="dev-lede">{desc}</p>
 
@@ -113,11 +106,6 @@ function DeviceShowcase({
               draggable="false"
             />
             <div className="shine" />
-          </div>
-
-          <div className="dev-caption">
-            <div className="cap-title">{captionTitle}</div>
-            <div className="cap-sub">{captionBody}</div>
           </div>
         </div>
       </div>
@@ -155,8 +143,6 @@ function DevelopmentPage() {
             { t: "Low Profile", d: "Setup in any chairside location." },
           ]}
           imgSrc={explodedRender}
-          captionTitle="Enclosure CAD (concept)"
-          captionBody="High-contrast render for readability; lighting kept intentionally subtle."
         />
 
         <DeviceShowcase
@@ -166,39 +152,58 @@ function DevelopmentPage() {
           desc="Designed to seamlessly integrate into existing workflow."
           bullets={[
             { t: "Simplicity", d: "Clutter-free profile for quick adaptation." },
-            { t: "Compatibility", d: "Ability to accept existing wire-feed" },
+            { t: "Compatibility", d: "Ability to accept existing wire-feed." },
             { t: "Stealth", d: "Runs while generating minimal noise." },
           ]}
           imgSrc={casingRender}
-          captionTitle="Rendering"
-          captionBody="Rendering of device casing."
           flip
         />
-         
-        <section className="dev-shot">
-          <div className="dev-shot-inner">
-            <p className="dev-eyebrow">Screenshot</p>
-            <h2>Application Preview</h2>
-            <p className="dev-lede">
-             Current UI capture from software development.
-            </p>
 
-            <div className="shot-shell">
-              <img
-                className="shot-img"
-                src={appScreenshot}
-                alt="Application screenshot"
-                draggable="false"
-              />
-            </div>
+<section className="dev-shot">
+  <div className="dev-shot-inner">
+    <p className="dev-eyebrow">Screenshot</p>
+    <h2>Application Preview</h2>
+    <p className="dev-lede">
+      Current UI capture from software development.
+    </p>
 
-            
+    <div className="shot-shell">
+      <img
+        className="shot-img"
+        src={appScreenshot}
+        alt="Application screenshot"
+        draggable="false"
+      />
+    </div>
+
+    <div className="shot-cap">
+      <div className="shot-points" role="list">
+
+        <div className="shot-point" role="listitem">
+          <div className="dot" />
+          <div>
+            <h3>Filter Height Control</h3>
+            <p>Manually define vertical threshold parameters for precise region isolation.</p>
           </div>
-        </section>
+        </div>
 
-      </main>
+        <div className="shot-point" role="listitem">
+          <div className="dot" />
+          <div>
+            <h3>Automatic Orientation</h3>
+            <p>Intelligently aligns models into a standardized reference position for consistent measurements.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+		        </main>
     </>
   );
 }
 
 export default DevelopmentPage;
+

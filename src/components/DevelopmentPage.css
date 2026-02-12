@@ -1,4 +1,3 @@
-
 /* DevelopmentPage.css */
 :root {
   --primary: #0b5fff;
@@ -228,27 +227,11 @@
   mix-blend-mode: screen;
 }
 
-.dev-caption {
-  width: min(440px, 100%);
-  padding: 14px 16px;
-  border-radius: 16px;
-  background: var(--panel);
-  border: 1px solid var(--stroke);
-  backdrop-filter: blur(10px);
-}
+/* (removed caption styles under first two images) */
 
-.cap-title {
-  font-weight: 700;
-  font-size: 13px;
-  letter-spacing: 0.02em;
-  margin: 0 0 6px;
-}
-
-.cap-sub {
-  font-size: 13px;
-  color: var(--muted2);
-  line-height: 1.55;
-}
+.dev-caption { display: none; }
+.cap-title { display: none; }
+.cap-sub { display: none; }
 
 /* LOWER SECTION */
 .dev-section {
@@ -354,6 +337,40 @@
 }
 
 .shot-cap {
-  width: min(760px, 100%); /* caption not as wide as image */
+  width: min(760px, 100%);
   margin: 0 auto;
+  display: grid;
+  gap: 12px;
 }
+
+.shot-points {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+}
+
+.shot-point {
+  display: grid;
+  grid-template-columns: 12px 1fr;
+  gap: 12px;
+  padding: 14px 14px;
+  border-radius: 16px;
+  background: var(--panel);
+  border: 1px solid var(--stroke);
+  backdrop-filter: blur(10px);
+  text-align: left;
+}
+
+.shot-point h3 {
+  margin: 0 0 4px;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+}
+
+.shot-point p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted2);
+  line-height: 1.55;
+}
+
