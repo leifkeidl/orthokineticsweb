@@ -11,6 +11,8 @@
   --shadow: 0 18px 44px rgba(2, 6, 23, 0.16);
 }
 
+html, body { margin: 0; padding: 0; }
+
 * { box-sizing: border-box; }
 
 .container{
@@ -21,24 +23,24 @@
     linear-gradient(180deg, var(--navy) 0px, #eef3ff 520px, #f7f9ff 100%);
 }
 
-/* ===== Desktop hero (overlay) ===== */
+
 .hero{
   position: relative;
-  width: 100%;
+  width: 100vw;
+  left: 50%;
+  margin-left: -50vw;
   overflow: hidden;
   background: var(--navy);
-height: clamp(650px, 75vh, 1200px);
+
+  height: auto;            /* key: stop forcing a height */
 }
 
 .hero-img{
-  position: absolute;
-  inset: 0;
+  position: static;        /* key: let it participate in layout */
   width: 100%;
-  height: 100%;
-  object-fit: contain; /* no width cropping */
-  object-position: center;
+  height: auto;
   display: block;
-  filter: saturate(0.98) contrast(1.02);
+  object-fit: contain;     /* harmless now */
 }
 
 .hero-overlay{

@@ -4,6 +4,8 @@ import teamPhoto from "../assets/ortho-team.jpg";
 import leifPhoto from "../assets/leif2.jpg";
 import gagePhoto from "../assets/gage1.jpg";
 import tommyPhoto from "../assets/tommy2.jpg";
+import koyPhoto from "../assets/blankuser.png";
+
 
 
 
@@ -52,18 +54,18 @@ function AboutPage() {
             <div className="team-card">
               <img src={tommyPhoto} alt="Tommy Welling" />
               <h3>Tommy Welling</h3>
-              <p className="role">Engineering Lead</p>
+              <p className="role">Engineer</p>
               <p className="bio">
 				Engineering Physics major specializing in electronics and digital systems.             </p>
               <a href="https://www.linkedin.com/in/tdwelling/" className="linkedin-btn">LinkedIn</a>
             </div>
 
             <div className="team-card">
-              <img src={teamPhoto} alt="Koy Moseler" />
+              <img src={koyPhoto} alt="Koy Moseler" />
               <h3>Koy Moseler</h3>
-              <p className="role">Electrical Systems Lead</p>
+              <p className="role">Engineer</p>
               <p className="bio">
-				desc  
+				Energy Systems Engineer with a focus on Power Electonics 
 		  </p>
               <a href="https://www.linkedin.com/in/koy-moseler-233b582a5/" className="linkedin-btn">LinkedIn</a>
             </div>
