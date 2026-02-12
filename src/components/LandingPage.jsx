@@ -33,10 +33,10 @@ function LandingPage() {
           <div className="quick-row">
             <div className="quick-card">
               <strong>Development updates</strong>
-              <span>CAD snapshots, prototype visuals, and progress notes.</span>
+              <span>Renderings and demonstrations of prototypes.</span>
             </div>
             <div className="quick-card">
-              <strong>Team + focus</strong>
+              <strong>Focus</strong>
               <span>Engineering-first work across software, systems, and design.</span>
             </div>
           </div>

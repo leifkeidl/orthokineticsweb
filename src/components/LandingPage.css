@@ -6,7 +6,7 @@
   --navy: #070b14;
   --navy2: #0a1021;
 
-  --glass: rgba(255,255,255,0.6);
+  --glass: rgba(255,255,255,0.2);
   --stroke: rgba(15, 23, 42, 0.10);
   --shadow: 0 18px 44px rgba(2, 6, 23, 0.16);
 }
@@ -17,7 +17,6 @@
   width: 100%;
   min-height: 100vh;
 
-  /* removed lighting flares */
   background:
     linear-gradient(180deg, var(--navy) 0px, #eef3ff 520px, #f7f9ff 100%);
 }
@@ -28,7 +27,7 @@
   width: 100%;
   overflow: hidden;
   background: var(--navy);
-  height: clamp(440px, 64vh, 760px);
+height: clamp(650px, 75vh, 1200px);
 }
 
 .hero-img{

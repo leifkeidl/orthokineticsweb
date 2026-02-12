@@ -1,0 +1,49 @@
+.contact-container {
+  max-width: 700px;
+  margin: 80px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.contact-container h1 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.contact-card {
+  margin-bottom: 30px;
+}
+
+.contact-card h2 {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+.contact-card p {
+  margin: 4px 0;
+}
+
+.contact-card a {
+  color: #0b5fff;
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+.email-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #0b5fff;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.email-button:hover {
+  opacity: 0.9;
+}
+

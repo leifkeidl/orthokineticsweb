@@ -36,7 +36,7 @@ function AboutPage() {
               <p className="bio">
 		  Engineer specializing in biomechanics and permanent/non-permanent deformation of materials.
 		               </p>
-              <a href="#" className="linkedin-btn">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/koy-moseler-233b582a5/" className="linkedin-btn">LinkedIn</a>
             </div>
 
             <div className="team-card">
@@ -55,7 +55,7 @@ function AboutPage() {
               <p className="role">Engineering Lead</p>
               <p className="bio">
 				Engineering Physics major specializing in electronics and digital systems.             </p>
-              <a href="#" className="linkedin-btn">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/tdwelling/" className="linkedin-btn">LinkedIn</a>
             </div>
 
             <div className="team-card">
@@ -65,7 +65,7 @@ function AboutPage() {
               <p className="bio">
 				desc  
 		  </p>
-              <a href="#" className="linkedin-btn">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/koy-moseler-233b582a5/" className="linkedin-btn">LinkedIn</a>
             </div>
 
           </div>
