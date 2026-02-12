@@ -17,10 +17,10 @@ function AboutPage() {
 
         {/* Mission Section */}
         <section className="about-hero">
-          <h1>About Orthokinetics</h1>
+          <h1>About Ortho-Kinetics</h1>
           <p>
-            Ortho-Kinetics is focused on engineering-driven innovation in orthodontic
-            technology. Our well-rounded team is building modern medical shit          </p>
+         The Orthokinetics team brings together expertise in engineering, software development, cybersecurity, and systems design. Our combined backgrounds allow us to move projects from concept to working implementation without relying on external handoffs.
+		  </p>
         </section>
 
         {/* Team Section */}

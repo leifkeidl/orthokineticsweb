@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import LandingPage from "./components/LandingPage.jsx";
 import AboutPage from "./components/AboutPage.jsx";
 import ContactPage from "./components/ContactPage.jsx";
-import PlatformPage from "./components/PlatformPage.jsx";
+import DevelopmentPage from "./components/DevelopmentPage.jsx";
 import SolutionsPage from "./components/SolutionsPage.jsx";
 function App() {
   return (
@@ -27,10 +27,10 @@ function App() {
             }
           />
           <Route
-            path="/platform"
+            path="/development"
             element={
               <>
-                <PlatformPage />
+                <DevelopmentPage />
               </>
             }
           />
