@@ -1,3 +1,4 @@
+
 /* DevelopmentPage.css */
 :root {
   --primary: #0b5fff;
@@ -248,6 +249,7 @@
   color: var(--muted2);
   line-height: 1.55;
 }
+
 /* LOWER SECTION */
 .dev-section {
   padding: 56px 24px 100px;
@@ -316,3 +318,42 @@
   .dev-point { padding: 12px 12px; }
 }
 
+/* ================= NEW: WIDE SCREENSHOT AT END ================= */
+
+.dev-shot {
+  padding: 74px 24px 120px;
+  border-top: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.dev-shot-inner {
+  max-width: 1400px; /* wider than 1200px blocks => 2–3x “wide feel” */
+  margin: 0 auto;
+  text-align: center;
+}
+
+.shot-shell {
+  width: 100%;
+  max-width: 1400px;
+  margin: 28px auto 14px;
+  border-radius: 28px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(900px 420px at 50% 0%, rgba(255,255,255,0.05), rgba(255,255,255,0.02)),
+    linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.09);
+  box-shadow: 0 30px 90px rgba(0,0,0,0.66);
+}
+
+.shot-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+}
+
+.shot-cap {
+  width: min(760px, 100%); /* caption not as wide as image */
+  margin: 0 auto;
+}

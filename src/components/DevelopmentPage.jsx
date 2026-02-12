@@ -1,3 +1,4 @@
+
 // DevelopmentPage.jsx
 import { useEffect, useMemo, useRef, useState } from "react";
 import Navbar from "./Navbar.jsx";
@@ -8,7 +9,10 @@ import casingRender from "../assets/ok-asset1.png";
 
 // 2) Exploded view (placeholder for now)
 //    Replace this import with your real exploded-view image when you have it.
-import explodedRender from "../assets/ok-asset1.png";
+import explodedRender from "../assets/EXPLODEPACKAGE2.png";
+
+// NEW: wide screenshot at end
+import appScreenshot from "../assets/app1.png";
 
 function clamp(n, min, max) {
   return Math.max(min, Math.min(max, n));
@@ -80,7 +84,8 @@ function DeviceShowcase({
     <section ref={sectionRef} className="dev-block" aria-label={title}>
       <div className={"dev-block-inner" + (flip ? " flip" : "")}>
         <div className="dev-copy">
-          <p className="dev-eyebrow">{eyebrow}</p>
+		  
+{eyebrow && <p className="dev-eyebrow">{eyebrow}</p>}
           <h2>{title}</h2>
           <p className="dev-lede">{desc}</p>
 
@@ -140,59 +145,60 @@ function DevelopmentPage() {
         </header>
 
         <DeviceShowcase
-          sectionRef={casingRef}
-          eyebrow="Enclosure"
-          title="Casing concept (box)"
-          desc="Early enclosure work focused on clean lines, manufacturable geometry, and a form factor that makes integration straightforward."
+          sectionRef={explodedRef}
+          eyebrow="Exploded Package"
+          title="All in One"
+          desc="Our compact model demonstrated in a narrow package."
           bullets={[
-            { t: "Manufacturable geometry", d: "Designed with realistic tolerances and assembly in mind." },
-            { t: "Integration-first", d: "Clear mounting/IO intent so internal systems can evolve without redoing the shell." },
-            { t: "Iterative refinement", d: "Fast revisions driven by fit, function, and visual clarity." },
+            { t: "Small Form Factor", d: "93% reduction in size compared to existing models." },
+            { t: "Easy Installation", d: "USB-C data transfer cable for simple setup." },
+            { t: "Low Profile", d: "Setup in any chairside location." },
           ]}
-          imgSrc={casingRender}
+          imgSrc={explodedRender}
           captionTitle="Enclosure CAD (concept)"
           captionBody="High-contrast render for readability; lighting kept intentionally subtle."
         />
 
         <DeviceShowcase
-          sectionRef={explodedRef}
-          eyebrow="CAD — Exploded view"
-          title="Exploded assembly (coming next)"
-          desc="Next up is an exploded view to communicate how the system stacks together—fast to understand, easy to iterate."
+          sectionRef={casingRef}
+          eyebrow="Casing render"
+          title="Smooth Integration"
+          desc="Designed to seamlessly integrate into existing workflow."
           bullets={[
-            { t: "Assembly clarity", d: "Shows how parts relate without a wall of text." },
-            { t: "Revision-friendly", d: "Makes it obvious what changes impact what." },
-            { t: "Documentation-ready", d: "Useful for internal notes and external demos." },
+            { t: "Simplicity", d: "Clutter-free profile for quick adaptation." },
+            { t: "Compatibility", d: "Ability to accept existing wire-feed" },
+            { t: "Stealth", d: "Runs while generating minimal noise." },
           ]}
-          imgSrc={explodedRender}
-          captionTitle="Exploded view (placeholder)"
-          captionBody="Swap this image when your exploded render is ready."
+          imgSrc={casingRender}
+          captionTitle="Rendering"
+          captionBody="Rendering of device casing."
           flip
         />
+         
+        <section className="dev-shot">
+          <div className="dev-shot-inner">
+            <p className="dev-eyebrow">Screenshot</p>
+            <h2>Application Preview</h2>
+            <p className="dev-lede">
+             Current UI capture from software development.
+            </p>
 
-        <section className="dev-section" aria-label="Next steps">
-          <div className="dev-section-inner">
-            <h2>Next steps</h2>
-            <div className="cards">
-              <article className="card">
-                <h3>More visuals</h3>
-                <p>Additional CAD snapshots, exploded assemblies, and quick turn variations.</p>
-              </article>
-              <article className="card">
-                <h3>Motion</h3>
-                <p>Subtle scroll-driven animation and short loops to highlight key mechanisms.</p>
-              </article>
-              <article className="card">
-                <h3>Technical notes</h3>
-                <p>Short, concrete write-ups: what changed, why it changed, and what’s next.</p>
-              </article>
+            <div className="shot-shell">
+              <img
+                className="shot-img"
+                src={appScreenshot}
+                alt="Application screenshot"
+                draggable="false"
+              />
             </div>
+
+            
           </div>
         </section>
+
       </main>
     </>
   );
 }
 
 export default DevelopmentPage;
-
