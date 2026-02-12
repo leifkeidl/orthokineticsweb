@@ -21,7 +21,7 @@ function AboutPage() {
         <section className="about-hero">
           <h1>About Ortho-Kinetics</h1>
           <p>
-         The Orthokinetics team brings together expertise in engineering, software development, cybersecurity, and systems design. Our combined backgrounds allow us to move projects from concept to working implementation without relying on external handoffs.
+         The Ortho-Kinetics team brings together expertise in engineering, software development, cybersecurity, and systems design. Our combined backgrounds allow us to move projects from concept to working implementation without relying on external handoffs.
 		  </p>
         </section>
 
@@ -65,7 +65,7 @@ function AboutPage() {
               <h3>Koy Moseler</h3>
               <p className="role">Engineer</p>
               <p className="bio">
-				Energy Systems Engineer with a focus on Power Electonics 
+				Energy Systems Engineer with a focus on Power Electonics.
 		  </p>
               <a href="https://www.linkedin.com/in/koy-moseler-233b582a5/" className="linkedin-btn">LinkedIn</a>
             </div>
