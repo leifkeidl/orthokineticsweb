@@ -38,7 +38,7 @@ function AboutPage() {
               <p className="bio">
 		  Engineer specializing in biomechanics and permanent/non-permanent deformation of materials.
 		               </p>
-              <a href="https://www.linkedin.com/in/koy-moseler-233b582a5/" className="linkedin-btn">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/gage-rusch-1a1733290/" className="linkedin-btn">LinkedIn</a>
             </div>
 
             <div className="team-card">
