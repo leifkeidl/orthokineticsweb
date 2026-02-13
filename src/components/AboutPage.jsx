@@ -4,7 +4,7 @@ import teamPhoto from "../assets/ortho-team.jpg";
 import leifPhoto from "../assets/leif2.jpg";
 import gagePhoto from "../assets/gage3.jpg";
 import tommyPhoto from "../assets/tommy2.jpg";
-import koyPhoto from "../assets/koy1.jpg";
+import koyPhoto from "../assets/koy1-retouched.jpg";
 
 
 
