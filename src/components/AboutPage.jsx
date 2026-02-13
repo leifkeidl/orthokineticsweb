@@ -2,9 +2,9 @@ import Navbar from "./Navbar.jsx";
 import "./AboutPage.css";
 import teamPhoto from "../assets/ortho-team.jpg";
 import leifPhoto from "../assets/leif2.jpg";
-import gagePhoto from "../assets/gage1.jpg";
+import gagePhoto from "../assets/gage3.jpg";
 import tommyPhoto from "../assets/tommy2.jpg";
-import koyPhoto from "../assets/blankuser.png";
+import koyPhoto from "../assets/koy1.jpg";
 
 
 
