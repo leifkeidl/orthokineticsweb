@@ -65,7 +65,7 @@ function AboutPage() {
               <h3>Koy Moseler</h3>
               <p className="role">Engineer</p>
               <p className="bio">
-				Energy Systems Engineer with a focus on Power Electronics.
+				Energy Systems Engineer with a focus on power electronics.
 		  </p>
               <a href="https://www.linkedin.com/in/koy-moseler-233b582a5/" className="linkedin-btn">LinkedIn</a>
             </div>
