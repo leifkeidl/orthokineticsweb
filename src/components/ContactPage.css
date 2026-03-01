@@ -1,49 +1,62 @@
 .contact-container {
-  max-width: 700px;
-  margin: 80px auto;
-  padding: 0 20px;
+  max-width: 900px;
+  margin: 100px auto;
+  padding: 0 24px;
   text-align: center;
 }
 
-.contact-container h1 {
-  margin-bottom: 40px;
-  font-size: 2rem;
+/* Hero Section */
+.contact-hero {
+  margin-bottom: 60px;
 }
 
+.contact-hero h1 {
+  font-size: 42px;
+  margin-bottom: 16px;
+}
+
+.contact-hero p {
+  font-size: 18px;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.7;
+  opacity: 0.8;
+}
+
+/* Card */
 .contact-card {
-  margin-bottom: 30px;
+  background: #f8f9fb;
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
 }
 
 .contact-card h2 {
-  margin-bottom: 8px;
-  font-size: 1.2rem;
+  font-size: 24px;
+  margin-bottom: 16px;
 }
 
 .contact-card p {
-  margin: 4px 0;
+  margin-bottom: 24px;
+  font-size: 16px;
+  opacity: 0.75;
 }
 
-.contact-card a {
-  color: #0b5fff;
-  text-decoration: none;
-}
-
-.contact-card a:hover {
-  text-decoration: underline;
-}
-
+/* Button */
 .email-button {
   display: inline-block;
-  margin-top: 20px;
-  padding: 12px 20px;
+  padding: 14px 28px;
   background: #0b5fff;
   color: white;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 12px;
   font-weight: 600;
+  font-size: 16px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
 }
 
 .email-button:hover {
-  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(11, 95, 255, 0.25);
+  opacity: 0.95;
 }
-
