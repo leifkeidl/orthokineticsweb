@@ -41,7 +41,7 @@ function AboutPage() {
                   href="mailto:gage.rusch@orthokinetics.org"
                   className="linkedin-btn"
                 >
-                  Email
+                  gage.rusch@orthokinetics.org
                 </a>
                 <a
                   href="https://www.linkedin.com/in/gage-rusch-1a1733290/"
@@ -67,7 +67,7 @@ function AboutPage() {
                   href="mailto:leif.keidl@orthokinetics.org"
                   className="linkedin-btn"
                 >
-                  Email
+                  leif.keidl@orthokinetics.org
                 </a>
                 <a
                   href="https://www.linkedin.com/in/leif-keidl-5b8784302/"
@@ -92,7 +92,7 @@ function AboutPage() {
                   href="mailto:tommy.welling@orthokinetics.org"
                   className="linkedin-btn"
                 >
-                  Email
+                  tommy.welling@orthokinetics.org
                 </a>
                 <a
                   href="https://www.linkedin.com/in/tdwelling/"
@@ -116,7 +116,7 @@ function AboutPage() {
                   href="mailto:koy.moseler@orthokinetics.org"
                   className="linkedin-btn"
                 >
-                  Email
+                  koy.moseler@orthokinetics.org
                 </a>
                 <a
                   href="https://www.linkedin.com/in/koy-moseler-233b582a5/"
