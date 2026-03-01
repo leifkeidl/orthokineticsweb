@@ -1,15 +1,24 @@
+/* AboutPage.css */
+
+/* Prevent padding from causing subtle overflow/centering issues (especially on iOS Safari) */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 .about-container {
   width: 100%;
-  padding: 40px 40px 100px 40px;  /* smaller top padding */
+  padding: 40px 40px 100px 40px;
   max-width: 1400px;
   margin: 0 auto;
+
+  /* Safety: avoid tiny horizontal overflow that makes things look “askew” on mobile */
+  overflow-x: hidden;
 }
 
 .about-hero {
   text-align: center;
   margin-bottom: 40px;
- } 
-
+}
 
 .about-hero p {
   font-size: 18px;
@@ -26,11 +35,14 @@
   margin-bottom: 50px;
 }
 
-/* Grid Layout — Fixed 2 Columns That Expand */
+/* Grid Layout */
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* always 2 columns on desktop */
+  grid-template-columns: repeat(2, 1fr);
   gap: 80px;
+
+  /* Ensures cards are centered within their grid cells */
+  justify-items: center;
 }
 
 /* Team Cards */
@@ -40,6 +52,14 @@
   border-radius: 20px;
   text-align: center;
   transition: transform 0.2s ease;
+
+  /* Make card centering deterministic across browsers */
+  width: 100%;
+  max-width: 560px;     /* adjust if you want wider/narrower cards */
+  margin: 0 auto;
+
+  /* Prevent children (long email pills) from causing overflow/shift */
+  overflow: hidden;
 }
 
 .team-card:hover {
@@ -48,7 +68,7 @@
 
 .team-card img {
   width: 100%;
-  aspect-ratio: 1 / 1;    /* square */
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 16px;
   margin-bottom: 30px;
@@ -73,8 +93,22 @@
   opacity: 0.85;
 }
 
+/* Button Row */
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+
+  /* Critical for mobile: prevents long email buttons from forcing overflow */
+  flex-wrap: wrap;
+}
+
+/* Buttons (Email + LinkedIn) */
 .linkedin-btn {
-  display: inline-block;
+  display: inline-flex;     /* better vertical alignment than inline-block */
+  align-items: center;
+  justify-content: center;
+
   padding: 10px 18px;
   background: #0b5fff;
   color: white;
@@ -82,6 +116,13 @@
   text-decoration: none;
   font-size: 14px;
   transition: opacity 0.2s ease;
+
+  /* Prevent long emails from breaking layout */
+  max-width: 100%;
+  min-width: 140px;         /* keeps LinkedIn from looking tiny */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .linkedin-btn:hover {
@@ -91,7 +132,8 @@
 /* Responsive */
 @media (max-width: 900px) {
   .team-grid {
-    grid-template-columns: 1fr;  /* stack on smaller screens */
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 
   .about-container {
@@ -105,10 +147,23 @@
   .team-section h2 {
     font-size: 28px;
   }
+
+  .team-card {
+    max-width: 620px; /* slightly wider single-column card if you want */
+  }
 }
 
-.button-row {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
+@media (max-width: 420px) {
+  .team-card {
+    padding: 28px;
+  }
+
+  .linkedin-btn {
+    width: 100%;       /* on very small screens, stack buttons cleanly */
+    min-width: 0;
+  }
+
+  .button-row {
+    gap: 10px;
+  }
 }
