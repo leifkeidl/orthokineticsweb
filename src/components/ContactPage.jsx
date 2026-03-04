@@ -23,7 +23,7 @@ function ContactPage() {
 
           <a
             className="email-button"
-            href="mailto:info@orthokinetics.org?subject=Orthokinetics Inquiry"
+            href="mailto:info@orthokinetics.org?subject=Ortho-Kinetics Inquiry"
           >
             info@orthokinetics.org
           </a>
