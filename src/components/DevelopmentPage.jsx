@@ -121,7 +121,7 @@ function DevelopmentPage() {
   return (
     <>
 		   <Helmet>
-        <title>Orthokinetics Development | Automated Orthodontic Manufacturing</title>
+        <title>Ortho-Kinetics Development | Automated Orthodontic Manufacturing</title>
         <meta
           name="description"
           content="Engineering development of the Ortho-Kinetics system including compact device design, software tools, and automated orthodontic appliance workflows."

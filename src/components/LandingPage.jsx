@@ -7,7 +7,7 @@ function LandingPage() {
   return (
     <>
 		    <Helmet>
-    <title>Orthokinetics | Engineering Solutions for Orthodontics</title>
+    <title>Ortho-Kinetics | Engineering Solutions for Orthodontics</title>
     <meta
       name="description"
       content="Ortho-Kinetics develops precision software and engineering-driven systems designed to support modern orthodontic workflows and clinical decision-making."
@@ -24,7 +24,7 @@ function LandingPage() {
 
       <main className="container">
         <section className="hero" aria-label="Orthokinetics hero">
-          <img className="hero-img" src={teamPhoto} alt="Orthokinetics team" />
+          <img className="hero-img" src={teamPhoto} alt="Ortho-Kinetics team" />
           <div className="hero-overlay" aria-hidden="true" />
 
           <div className="hero-content">

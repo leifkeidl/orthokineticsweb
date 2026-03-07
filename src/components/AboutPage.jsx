@@ -10,7 +10,7 @@ import koyPhoto from "../assets/koy1-retouched.jpg";
 function AboutPage() {
   return (
     <><Helmet>
-  <title>About Orthokinetics | Engineering & Development Team</title>
+  <title>About Ortho-Kinetics | Engineering & Development Team</title>
   <meta
     name="description"
     content="Meet the Ortho-Kinetics team developing automated orthodontic manufacturing systems and same-visit retainer technology."
