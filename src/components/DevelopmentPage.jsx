@@ -2,6 +2,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import Navbar from "./Navbar.jsx";
 import "./DevelopmentPage.css";
+import { Helmet } from "react-helmet-async";
 
 // 1) “CAD box / casing” render
 import casingRender from "../assets/ok-asset1.png";
@@ -119,6 +120,13 @@ function DevelopmentPage() {
 
   return (
     <>
+		   <Helmet>
+        <title>Orthokinetics Development | Automated Orthodontic Manufacturing</title>
+        <meta
+          name="description"
+          content="Engineering development of the Ortho-Kinetics system including compact device design, software tools, and automated orthodontic appliance workflows."
+        />
+      </Helmet>
       <Navbar />
 
       <main className="dev">

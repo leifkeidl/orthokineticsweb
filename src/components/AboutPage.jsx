@@ -1,5 +1,6 @@
 import Navbar from "./Navbar.jsx";
 import "./AboutPage.css";
+import { Helmet } from "react-helmet-async";
 import teamPhoto from "../assets/ortho-team.jpg";
 import leifPhoto from "../assets/leif2.jpg";
 import gagePhoto from "../assets/gage3.jpg";
@@ -8,7 +9,13 @@ import koyPhoto from "../assets/koy1-retouched.jpg";
 
 function AboutPage() {
   return (
-    <>
+    <><Helmet>
+  <title>About Orthokinetics | Engineering & Development Team</title>
+  <meta
+    name="description"
+    content="Meet the Ortho-Kinetics team developing automated orthodontic manufacturing systems and same-visit retainer technology."
+  />
+</Helmet>
       <Navbar />
 
       <main className="about-container">

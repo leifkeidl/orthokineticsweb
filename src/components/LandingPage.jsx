@@ -1,10 +1,25 @@
 import Navbar from "./Navbar.jsx";
 import "./LandingPage.css";
 import teamPhoto from "../assets/ortho-team.jpg";
+import { Helmet } from "react-helmet-async";
 
 function LandingPage() {
   return (
     <>
+		    <Helmet>
+    <title>Orthokinetics | Engineering Solutions for Orthodontics</title>
+    <meta
+      name="description"
+      content="Ortho-Kinetics develops precision software and engineering-driven systems designed to support modern orthodontic workflows and clinical decision-making."
+    />
+<meta property="og:title" content="Ortho-Kinetics" />
+<meta property="og:description" content="Engineering-driven orthodontic technology." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://orthokinetics.org" />
+		  <meta property="og:image" content="https://orthokinetics.org/preview.png" />
+<meta property="og:site_name" content="Ortho-Kinetics" />
+  </Helmet>
+
       <Navbar />
 
       <main className="container">
@@ -47,4 +62,3 @@ function LandingPage() {
 }
 
 export default LandingPage;
-
