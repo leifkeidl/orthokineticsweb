@@ -1,138 +1,152 @@
 import Navbar from "./Navbar.jsx";
 import "./AboutPage.css";
 import { Helmet } from "react-helmet-async";
-import teamPhoto from "../assets/ortho-team.jpg";
 import leifPhoto from "../assets/leif2.jpg";
 import gagePhoto from "../assets/gage3.jpg";
 import tommyPhoto from "../assets/tommy2.jpg";
 import koyPhoto from "../assets/koy1-retouched.jpg";
 
 function AboutPage() {
+  const teamMembers = [
+    {
+      name: "Gage Rusch",
+      role: "Project Lead",
+      image: gagePhoto,
+      alt: "Gage Rusch",
+      bio: "Engineer focused on biomechanics, material behavior, and the deformation characteristics of permanent and non-permanent systems.",
+      email: "gage.rusch@orthokinetics.org",
+      linkedin: "https://www.linkedin.com/in/gage-rusch-1a1733290/",
+      imageUrl: "https://orthokinetics.org/images/team/gage3.jpg",
+    },
+    {
+      name: "Leif Keidl",
+      role: "Technical Lead",
+      image: leifPhoto,
+      alt: "Leif Keidl",
+      bio: "Technical lead with a background in cybersecurity, software development, and IT infrastructure, supporting secure systems and full-stack implementation.",
+      email: "leif.keidl@orthokinetics.org",
+      linkedin: "https://www.linkedin.com/in/leif-keidl-5b8784302/",
+      imageUrl: "https://orthokinetics.org/images/team/leif2.jpg",
+    },
+    {
+      name: "Tommy Welling",
+      role: "Engineer",
+      image: tommyPhoto,
+      alt: "Tommy Welling",
+      bio: "Engineering Physics major specializing in electronics, digital systems, and hands-on technical problem solving.",
+      email: "tommy.welling@orthokinetics.org",
+      linkedin: "https://www.linkedin.com/in/tdwelling/",
+      imageUrl: "https://orthokinetics.org/images/team/tommy2.jpg",
+    },
+    {
+      name: "Koy Moseler",
+      role: "Engineer",
+      image: koyPhoto,
+      alt: "Koy Moseler",
+      bio: "Engineer focused on energy systems, power electronics, and practical hardware development for real-world technical applications.",
+      email: "koy.moseler@orthokinetics.org",
+      linkedin: "https://www.linkedin.com/in/koy-moseler-233b582a5/",
+      imageUrl: "https://orthokinetics.org/images/team/koy1-retouched.jpg",
+    },
+  ];
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    name: "About Ortho-Kinetics",
+    url: "https://orthokinetics.org/about",
+    description:
+      "Meet the Ortho-Kinetics engineering and development team building automated orthodontic manufacturing systems and same-visit retainer technology.",
+    mainEntity: teamMembers.map((member) => ({
+      "@type": "Person",
+      name: member.name,
+      jobTitle: member.role,
+      description: member.bio,
+      image: member.imageUrl,
+      email: `mailto:${member.email}`,
+      sameAs: [member.linkedin],
+      worksFor: {
+        "@type": "Organization",
+        name: "Ortho-Kinetics",
+        url: "https://orthokinetics.org",
+      },
+    })),
+  };
+
   return (
-    <><Helmet>
-  <title>About Ortho-Kinetics | Engineering & Development Team</title>
-  <meta
-    name="description"
-    content="Meet the Ortho-Kinetics team developing automated orthodontic manufacturing systems and same-visit retainer technology."
-  />
-</Helmet>
+    <>
+      <Helmet>
+        <title>About Ortho-Kinetics | Engineering & Development Team</title>
+        <meta
+          name="description"
+          content="Meet the Ortho-Kinetics engineering and development team building automated orthodontic manufacturing systems and same-visit retainer technology."
+        />
+        <meta
+          name="keywords"
+          content="Ortho-Kinetics team, Gage Rusch, Leif Keidl, Tommy Welling, Koy Moseler, orthodontic engineering, power electronics, cybersecurity, software development"
+        />
+        <meta property="og:title" content="About Ortho-Kinetics" />
+        <meta
+          property="og:description"
+          content="Meet the team behind Ortho-Kinetics and the work driving our engineering and development efforts."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://orthokinetics.org/about" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="canonical" href="https://orthokinetics.org/about" />
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      </Helmet>
+
       <Navbar />
 
       <main className="about-container">
-        {/* Mission Section */}
         <section className="about-hero">
           <h1>About Ortho-Kinetics</h1>
           <p>
-            The Ortho-Kinetics team brings together expertise in engineering,
-            software development, cybersecurity, and systems design. Our
-            combined backgrounds allow us to move projects from concept to
-            working implementation without relying on external handoffs.
+            Ortho-Kinetics develops engineering systems designed to support
+            modern orthodontic workflows. Our work combines mechanical design,
+            electronics, and software to build practical tools for orthodontic
+            manufacturing and clinical analysis.
+		   <br /><br />
+            By developing hardware and software together within a single team,
+            we move ideas from concept to working systems efficiently without
+            fragmented development or external handoffs.
           </p>
         </section>
 
-        {/* Team Section */}
         <section className="team-section">
           <h2>Meet the Team</h2>
 
           <div className="team-grid">
-            <div className="team-card">
-              <img src={gagePhoto} alt="Gage Rusch" />
-              <h3>Gage Rusch</h3>
-              <p className="role">Project Lead</p>
-              <p className="bio">
-                Engineer specializing in biomechanics and
-                permanent/non-permanent deformation of materials.
-              </p>
-              <div className="button-row">
-                <a
-                  href="mailto:gage.rusch@orthokinetics.org"
-                  className="linkedin-btn"
-                >
-                  gage.rusch@orthokinetics.org
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/gage-rusch-1a1733290/"
-                  className="linkedin-btn"
-                >
-                  LinkedIn
-                </a>
-              </div>
-            </div>
+            {teamMembers.map((member) => (
+              <article className="team-card" key={member.name}>
+                <img src={member.image} alt={member.alt} />
+                <h3>{member.name}</h3>
+                <p className="role">{member.role}</p>
+                <p className="bio">{member.bio}</p>
 
-            <div className="team-card">
-              <img src={leifPhoto} alt="Leif Keidl" />
-              <h3>Leif Keidl</h3>
-              <p className="role">Technical Lead</p>
-              <p className="bio">
-                Cybersecurity and computer science background with hands-on
-                experience and a focused interest in IT infrastructure and
-                software development.
-              </p>
-
-              <div className="button-row">
-                <a
-                  href="mailto:leif.keidl@orthokinetics.org"
-                  className="linkedin-btn"
-                >
-                  leif.keidl@orthokinetics.org
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/leif-keidl-5b8784302/"
-                  className="linkedin-btn"
-                >
-                  LinkedIn
-                </a>
-              </div>
-            </div>
-
-            <div className="team-card">
-              <img src={tommyPhoto} alt="Tommy Welling" />
-              <h3>Tommy Welling</h3>
-              <p className="role">Engineer</p>
-              <p className="bio">
-                Engineering Physics major specializing in electronics and
-                digital systems.{" "}
-              </p>
-
-              <div className="button-row">
-                <a
-                  href="mailto:tommy.welling@orthokinetics.org"
-                  className="linkedin-btn"
-                >
-                  tommy.welling@orthokinetics.org
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/tdwelling/"
-                  className="linkedin-btn"
-                >
-                  LinkedIn
-                </a>
-              </div>
-            </div>
-
-            <div className="team-card">
-              <img src={koyPhoto} alt="Koy Moseler" />
-              <h3>Koy Moseler</h3>
-              <p className="role">Engineer</p>
-              <p className="bio">
-                Energy Systems Engineer with a focus on power electronics.
-              </p>
-
-              <div className="button-row">
-                <a
-                  href="mailto:koy.moseler@orthokinetics.org"
-                  className="linkedin-btn"
-                >
-                  koy.moseler@orthokinetics.org
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/koy-moseler-233b582a5/"
-                  className="linkedin-btn"
-                >
-                  LinkedIn
-                </a>
-              </div>
-            </div>
+                <div className="button-row">
+                  <a
+                    href={`mailto:${member.email}`}
+                    className="linkedin-btn"
+                    aria-label={`Email ${member.name}`}
+                  >
+                    {member.email}
+                  </a>
+                  <a
+                    href={member.linkedin}
+                    className="linkedin-btn"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`${member.name} LinkedIn profile`}
+                  >
+                    LinkedIn
+                  </a>
+                </div>
+              </article>
+            ))}
           </div>
         </section>
       </main>
