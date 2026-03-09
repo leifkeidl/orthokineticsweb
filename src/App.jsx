@@ -2,6 +2,8 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import LandingPage from "./components/LandingPage.jsx";
 import AboutPage from "./components/AboutPage.jsx";
+import DevPage from "./components/DevPage.jsx";
+
 import ContactPage from "./components/ContactPage.jsx";
 import DevelopmentPage from "./components/DevelopmentPage.jsx";
 import SolutionsPage from "./components/SolutionsPage.jsx";
@@ -16,6 +18,8 @@ function App() {
           <Route path="/solutions" element={<SolutionsPage />} />
           <Route path="/development" element={<DevelopmentPage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/dev" element={<DevPage />} />
+
           <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
