@@ -1,17 +1,17 @@
 // DevelopmentPage.jsx
 import { useEffect, useMemo, useRef, useState } from "react";
-import Navbar from "./Navbar.jsx";
+import Navbar from "../../components/Navbar.jsx"
 import "./DevelopmentPage.css";
 import { Helmet } from "react-helmet-async";
 
 // 1) “CAD box / casing” render
-import casingRender from "../assets/ok-asset1.png";
+import casingRender from "../../assets/images/engineering/ok-asset1.png";
 
 // 2) Exploded view (placeholder for now)
-import explodedRender from "../assets/EXPLODEPACKAGE2.png";
+import explodedRender from "../../assets/images/engineering/EXPLODEPACKAGE2.png";
 
 // wide screenshot at end
-import appScreenshot from "../assets/app1.png";
+import appScreenshot from "../../assets/images/software/app1.png";
 
 function clamp(n, min, max) {
   return Math.max(min, Math.min(max, n));

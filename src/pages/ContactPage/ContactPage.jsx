@@ -1,4 +1,4 @@
-import Navbar from "./Navbar.jsx";
+import Navbar from "../../components/Navbar.jsx"
 import "./ContactPage.css";
 import { Helmet } from "react-helmet-async";
 

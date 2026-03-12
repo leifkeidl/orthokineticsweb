@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { STLLoader } from "three/examples/jsm/loaders/STLLoader.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-import jawModelUrl from "../assets/upper_jaw.stl";
+import jawModelUrl from "../../assets/models/upper_jaw.stl";
 
 export default function DevPage() {
   const mountRef = useRef(null);

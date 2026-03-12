@@ -1,12 +1,10 @@
 //import './App.css'
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import LandingPage from "./components/LandingPage.jsx";
-import AboutPage from "./components/AboutPage.jsx";
-import DevPage from "./components/DevPage.jsx";
-
-import ContactPage from "./components/ContactPage.jsx";
-import DevelopmentPage from "./components/DevelopmentPage.jsx";
-import SolutionsPage from "./components/SolutionsPage.jsx";
+import LandingPage from "../pages/LandingPage/LandingPage.jsx";
+import AboutPage from "../pages/AboutPage/AboutPage.jsx";
+import DevPage from "../pages/DevPage/DevPage.jsx";
+import DevelopmentPage from "../pages/DevelopmentPage/DevelopmentPage.jsx";
+import ContactPage from "../pages/ContactPage/ContactPage.jsx";
 import { HelmetProvider } from "react-helmet-async";
 
 function App() {
@@ -15,7 +13,6 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LandingPage />} />
-          <Route path="/solutions" element={<SolutionsPage />} />
           <Route path="/development" element={<DevelopmentPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/dev" element={<DevPage />} />

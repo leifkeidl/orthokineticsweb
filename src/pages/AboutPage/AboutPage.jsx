@@ -1,10 +1,10 @@
-import Navbar from "./Navbar.jsx";
+import Navbar from "../../components/Navbar.jsx"
 import "./AboutPage.css";
 import { Helmet } from "react-helmet-async";
-import leifPhoto from "../assets/leif2.jpg";
-import gagePhoto from "../assets/gage3.jpg";
-import tommyPhoto from "../assets/tommy2.jpg";
-import koyPhoto from "../assets/koy1-retouched.jpg";
+import leifPhoto from "../../assets/images/people/leif2.jpg";
+import gagePhoto from "../../assets/images/people/gage3.jpg";
+import tommyPhoto from "../../assets/images/people/tommy2.jpg";
+import koyPhoto from "../../assets/images/people/koy1-retouched.jpg";
 
 function AboutPage() {
   const teamMembers = [

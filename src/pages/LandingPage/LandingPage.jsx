@@ -1,6 +1,6 @@
-import Navbar from "./Navbar.jsx";
+import Navbar from "../../components/Navbar.jsx";
 import "./LandingPage.css";
-import teamPhoto from "../assets/ortho-team.jpg";
+import teamPhoto from "../../assets/images/team/ortho-team.jpg";
 import { Helmet } from "react-helmet-async";
 
 function LandingPage() {
