@@ -47,7 +47,7 @@
 
 /* Team Cards */
 .team-card {
-  background: #f8f9fb;
+  background: var(--bg-gray);
   padding: 40px;
   border-radius: 20px;
   text-align: center;

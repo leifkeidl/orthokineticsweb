@@ -25,7 +25,7 @@
 
 /* Card */
 .contact-card {
-  background: #f8f9fb;
+  background: var(--bg-gray);
   padding: 50px 40px;
   border-radius: 20px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);

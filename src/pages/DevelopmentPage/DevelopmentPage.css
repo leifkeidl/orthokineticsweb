@@ -3,8 +3,8 @@
   --primary: #0b5fff;
 
   /* toned-down lighting (classier) */
-  --bg0: #0f1524;
-  --bg1: #29334f;
+  --bg0: #var(--background-color);
+  --bg1: #var(--background-color2);
 
   --panel: rgba(255, 255, 255, 0.045);
   --panel2: rgba(255, 255, 255, 0.06);

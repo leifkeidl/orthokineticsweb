@@ -1,6 +1,7 @@
 import Navbar from "../../components/Navbar.jsx";
 import "./LandingPage.css";
 import teamPhoto from "../../assets/images/team/ortho-team.jpg";
+import heroVideo from "../../assets/videos/placeholder.mp4";
 import { Helmet } from "react-helmet-async";
 
 function LandingPage() {
@@ -9,11 +10,7 @@ function LandingPage() {
       "@context": "https://schema.org",
       "@type": "Organization",
       name: "Ortho-Kinetics Technologies, LLC",
-		 alternateName: [
-    "Ortho-Kinetics",
-    "Orthokinetics",
-    "OrthoKinetics"
-  ],
+      alternateName: ["Ortho-Kinetics", "Orthokinetics", "OrthoKinetics"],
       url: "https://orthokinetics.org",
       logo: "https://orthokinetics.org/preview.png",
       image: "https://orthokinetics.org/preview.png",
@@ -34,7 +31,6 @@ function LandingPage() {
           "@type": "Person",
           name: "Leif Keidl",
         },
-
         {
           "@type": "Person",
           name: "Tommy Welling",
@@ -94,51 +90,60 @@ function LandingPage() {
         </script>
       </Helmet>
 
-      <Navbar />
+      <div className="landing-page">
+        <Navbar />
 
-      <main className="container">
-        <section className="hero" aria-label="Orthokinetics hero">
-          <img className="hero-img" src={teamPhoto} alt="Ortho-Kinetics team" />
-          <div className="hero-overlay" aria-hidden="true" />
+        <section className="landing-hero">
+          <div className="landing-hero__media">
+            <img
+              className="landing-hero__fallback"
+              src={teamPhoto}
+              alt="Ortho-Kinetics team"
+            />
+            <video
+              className="landing-hero__video"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              poster={teamPhoto}
+              aria-label="Ortho-Kinetics hero video"
+            >
+              <source src={heroVideo} type="video/mp4" />
+            </video>
+            <div className="landing-hero__overlay" />
+          </div>
 
-          <div className="hero-content">
-            <h1>Engineering-Driven Solutions for Orthodontics</h1>
-            <p>
-              Precision-focused software built to support accurate analysis and
-              informed clinical decisions.
-            </p>
-
-            <div className="hero-actions">
-              <a className="hero-btn primary" href="/contact">
-                Contact
-              </a>
-              <a className="hero-btn secondary" href="/about">
-                Learn more
-              </a>
-            </div>
+          <div className="landing-hero__headline-wrap">
+            <h1 className="landing-hero__headline">
+		  Real-Time Permanent Retainer Fabrication
+            </h1>
           </div>
         </section>
 
-        <section className="home-below" aria-label="Landing page intro">
-          <p className="hint">
-            We’re building practical tools that blend software, systems, and
-            engineering into a modern orthodontic workflow.
+        <section className="landing-hero__below">
+          <p className="landing-hero__subtext">
+            Precision-focused software built to support accurate analysis and
+            informed clinical decisions.
           </p>
 
-          <div className="quick-row">
-            <div className="quick-card">
-              <strong>Development updates</strong>
-              <span>Renderings and demonstrations of prototypes.</span>
-            </div>
-            <div className="quick-card">
-              <strong>Focus</strong>
-              <span>
-                Engineering-first work across software, systems, and design.
-              </span>
-            </div>
+          <div className="landing-hero__actions">
+            <a
+              className="landing-hero__button landing-hero__button--primary"
+              href="/contact"
+            >
+              Contact
+            </a>
+            <a
+              className="landing-hero__button landing-hero__button--secondary"
+              href="/development"
+            >
+              Learn more
+            </a>
           </div>
         </section>
-      </main>
+      </div>
     </>
   );
 }
