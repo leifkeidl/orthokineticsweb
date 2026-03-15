@@ -1,6 +1,6 @@
 import Navbar from "../../components/Navbar.jsx";
 import "./LandingPage.css";
-import teamPhoto from "../../assets/images/engineering/EXPLODEPACKAGE1.png;
+import teamPhoto from "../../assets/images/engineering/EXPLODEPACKAGE1.png";
 import heroVideo from "../../assets/videos/placeholder.mp4";
 import fp1Image from "../../assets/images/engineering/fp1.png";
 import { Helmet } from "react-helmet-async";
