@@ -108,9 +108,7 @@ function LandingPage() {
 
         <section className="landing-hero__below">
           <p className="landing-hero__subtext">
-            Precision-focused software built to support accurate analysis and
-            informed clinical decisions.
-          </p>
+            Precision-focused solution built to support accurate analysis and cut down on chair time.          </p>
         </section>
 
         <section className="landing-engineering">
@@ -126,13 +124,12 @@ function LandingPage() {
           <div className="landing-engineering__content">
             <p className="landing-engineering__paragraph">
               Our engineering approach focuses on translating orthodontic
-              workflows into precise fabrication-ready digital systems.
-              By combining geometric modeling, process-driven design,
+              workflows into precise, fabrication-ready systems.
+              By combining process-driven design
               and clinically informed software development, Ortho-Kinetics
               is building tools intended to improve consistency,
               accelerate production, and support more reliable retainer
-              fabrication from digital input to final output.
-            </p>
+              fabrication from digital scan to ready-made retainer.            </p>
           </div>
 
         </section>
@@ -144,7 +141,7 @@ function LandingPage() {
           </div>
 
           <div className="landing-metric__label">
-            Reduction in fabrication time
+            Reduction in fabrication time compared to existing solutions.
           </div>
 
         </section>

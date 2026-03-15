@@ -104,16 +104,16 @@ function AboutPage() {
       <main className="about-container">
         <section className="about-hero">
           <h1>About Ortho-Kinetics</h1>
-          <p>
-            Ortho-Kinetics develops engineering systems designed to support
-            modern orthodontic workflows. Our work combines mechanical design,
-            electronics, and software to build practical tools for orthodontic
-            manufacturing and clinical analysis.
-		   <br /><br />
-            By developing hardware and software together within a single team,
-            we move ideas from concept to working systems efficiently without
-            fragmented development or external handoffs.
-          </p>
+        <p>
+  Ortho-Kinetics was founded in Waukesha, Wisconsin in 2025 with the goal of improving orthodontic workflows.
+  By combining mechanical design, electronics, and software development, we focus on advancing orthodontic
+  manufacturing and clinical processes.
+
+  <br /><br />
+
+  Integrating hardware and software development within a single team allows ideas to move efficiently
+  from concept to working systems, without fragmented development or unnecessary external handoffs.
+</p> 
         </section>
 
         <section className="team-section">
