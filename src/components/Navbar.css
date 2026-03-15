@@ -1,12 +1,12 @@
 :root {
   --nav-text: #0b1220;
-  --nav-muted: #334155;
-  --nav-hover: #0b5fff;
   --nav-border: rgba(15, 23, 42, 0.10);
 
   --nav-height: 78px;
   --nav-pad-x: 64px;
-  --radius: 12px;
+
+  --ortho-color: #00D2D3;
+  --dash-color: #64748B;
 }
 
 * { box-sizing: border-box; }
@@ -18,73 +18,139 @@ html, body {
   overflow-x: hidden;
 }
 
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+
 .navbar {
+
   height: var(--nav-height);
   width: 100%;
-  max-width: 100%;
-  min-width: 0;
 
-  color: var(--nav-text);
-
-  background:
-	linear-gradient(to bottom, var(--background-color-lighter), var(--background-color-lighter));
-  border-bottom: 1px solid var(--nav-border);
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  padding: 0 var(--nav-pad-x);
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  padding: 0 var(--nav-pad-x);
+  background:
+    linear-gradient(
+      to bottom,
+      var(--background-color-lighter),
+      var(--background-color-lighter2)
+    );
+
+  border-bottom: 1px solid var(--nav-border);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
 
   position: sticky;
   top: 0;
   z-index: 1000;
-
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
 }
+
+/* ========================= */
+/* BRAND */
+/* ========================= */
 
 .nav-left {
   display: flex;
   align-items: center;
-  min-width: 0;
 }
 
 .brand {
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-  color: var(--nav-text);
-  min-width: 0;
-}
 
-.brand-logo {
-  height: auto;
-  width: auto;
-  max-width: 20vw;   /* keeps it proportional */
-  max-height: 38px;
-  display: block;
-  filter: drop-shadow(0 2px 10px rgba(15, 23, 42, 0.12));
-}
-
-.nav-links {
-  list-style: none;
   display: flex;
   align-items: center;
+
+  text-decoration: none;
+}
+
+/* wordmark */
+
+.brand-wordmark {
+
+  display: flex;
+  align-items: center;
+
+  font-family:
+    "Inter",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size: 34px;
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+
+/* ORTHO */
+
+.brand-ortho {
+  font-weight: 900;
+  color: var(--ortho-color);
+}
+
+/* dash */
+
+.brand-dash {
+  margin: 0 0px;
+  font-weight: 600;
+  color: var(--dash-color);
+}
+
+/* KINETICS */
+
+.brand-kinetics {
+  font-weight: 500;
+  color: white;
+}
+
+/* OK badge */
+
+.brand-badge {
+
+  width: 72px;
+  height: 72px;
+		margin-top: 5px;
+  margin-left: 0px;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(
+      0 2px 8px
+      rgba(15,23,42,0.15)
+    );
+}
+
+/* ========================= */
+/* NAV LINKS */
+/* ========================= */
+
+.nav-links {
+
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+
   gap: 14px;
+
   margin: 0;
   padding: 0;
-  min-width: 0;
 }
 
 .nav-link {
+
   text-decoration: none;
-  color: var(--nav-muted);
+
+  color: var(--text-color);
+
   font-weight: 650;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
 
   padding: 10px 12px;
+
   border-radius: 999px;
 
   transition:
@@ -94,45 +160,56 @@ html, body {
 }
 
 .nav-link:hover {
-  color: var(--nav-text);
-  background: rgba(15, 23, 42, 0.06);
-  transform: translateY(-1px);
-}
 
-.nav-link:focus-visible,
-.brand:focus-visible {
-  outline: 3px solid rgba(11, 95, 255, 0.35);
-  outline-offset: 2px;
-  border-radius: 12px;
+  color: var(--nav-text);
+
+  background:
+    rgba(15, 23, 42, 0.06);
+
+  transform: translateY(-1px);
 }
 
 .nav-cta {
+
   color: white;
-  background: linear-gradient(180deg, #0b5fff, #0849c9);
+
+  background: var(--accent-color);
+
   padding: 10px 16px;
+
   border-radius: 999px;
-  box-shadow: 0 10px 20px rgba(11, 95, 255, 0.25);
 }
 
 .nav-cta:hover {
-  background: linear-gradient(180deg, #0849c9, #063a9f);
-  color: white;
+
+  background: var(--accent-color-hover);
+
   transform: translateY(-1px);
 }
 
 /* ========================= */
-/* Tablet adjustments */
+/* Tablet */
 /* ========================= */
 
 @media (max-width: 900px) {
-  :root { --nav-pad-x: 18px; }
 
-  .nav-links { gap: 8px; }
-  .nav-link { padding: 9px 10px; font-size: 0.9rem; }
+  :root {
+    --nav-pad-x: 18px;
+  }
+
+  .brand-wordmark {
+    font-size: 28px;
+  }
+
+  .brand-badge {
+    width: 36px;
+    height: 36px;
+  }
+
 }
 
 /* ========================= */
-/* Skinny phone scaling */
+/* Phone */
 /* ========================= */
 
 @media (max-width: 600px) {
@@ -142,24 +219,18 @@ html, body {
     --nav-pad-x: 14px;
   }
 
-  /* Keep logo dominant but controlled */
-  .brand-logo {
-    max-width: 28vw;
-    max-height: 30px;
+  .brand-wordmark {
+    font-size: 20px;
   }
 
-  /* Scale nav buttons proportionally */
+  .brand-badge {
+    width: 28px;
+    height: 28px;
+  }
+
   .nav-link {
-    font-size: 3.6vw;
-    padding: 1.8vw 2.6vw;
+    font-size: 0.85rem;
+    padding: 8px 9px;
   }
 
-  .nav-cta {
-    padding: 1.8vw 3vw;
-  }
-
-  .nav-links {
-    gap: 2vw;
-  }
 }
-
