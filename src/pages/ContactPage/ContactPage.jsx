@@ -1,5 +1,6 @@
-import Navbar from "../../components/Navbar.jsx"
+import Navbar from "../../components/Navbar.jsx";
 import "./ContactPage.css";
+import teamPhoto from "../../assets/images/team/ortho-team.jpg";
 import { Helmet } from "react-helmet-async";
 
 function ContactPage() {
@@ -29,6 +30,13 @@ function ContactPage() {
       <Navbar />
 
       <main className="contact-container">
+
+        <img
+          src={teamPhoto}
+          alt="Ortho-Kinetics team"
+          className="contact-team-photo"
+        />
+
         <section className="contact-hero">
           <h1>Contact Ortho-Kinetics</h1>
           <p>
@@ -48,6 +56,7 @@ function ContactPage() {
             info@orthokinetics.org
           </a>
         </section>
+
       </main>
     </>
   );

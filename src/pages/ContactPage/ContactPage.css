@@ -1,8 +1,18 @@
 .contact-container {
   max-width: 900px;
-  margin: 100px auto;
+  margin: 30px auto;
   padding: 0 24px;
   text-align: center;
+}
+
+/* Team Photo */
+.contact-team-photo {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto 50px auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.08);
 }
 
 /* Hero Section */
@@ -46,7 +56,7 @@
 .email-button {
   display: inline-block;
   padding: 14px 28px;
-  background: #0b5fff;
+  background: var(--accent-color);
   color: white;
   text-decoration: none;
   border-radius: 12px;
